@@ -92,6 +92,8 @@
 }
 ```
 
+<br>
+
 ### Request 4: View All Uploaded File (by uploader)
 
 ![GET](https://badgen.net/badge/Method/GET/green)<span style="padding:10px">**/file**</span>
