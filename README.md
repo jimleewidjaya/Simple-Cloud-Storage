@@ -43,6 +43,7 @@
 ```
 
 <br>
+
 ### Request 2: Logout
 
 ![POST](https://badgen.net/badge/Method/POST/yellow)<span style="padding:10px">**/logout**</span>
