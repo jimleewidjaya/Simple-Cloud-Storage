@@ -1,11 +1,13 @@
 # Simple-Cloud-Storage
 
+a service used to upload and download files that are limited by the ownership of the uploader
+
 ## Requests
 
 1. Login
 2. Logout
 3. Upload File
-4. View All Uploaded File (by Uploader)
+4. View Uploaded File
 5. Download File
 
 ### Request 1: Login
@@ -68,6 +70,10 @@
 
 ![POST](https://badgen.net/badge/Method/POST/yellow)<span style="padding:10px">**/upload**</span>
 
+Form-Data
+
+1. type = file --> key = file
+
 #### Responses:
 
 #### Success
@@ -92,9 +98,7 @@
 }
 ```
 
-<br>
-
-### Request 4: View All Uploaded File (by uploader)
+### Request #4: View All Uploaded file (by uploader)
 
 ![GET](https://badgen.net/badge/Method/GET/green)<span style="padding:10px">**/file**</span>
 
@@ -110,15 +114,11 @@
   "files": [
     {
       "id_file": 1,
-      "filename": "168656837599997.jpg"
+      "filename": "168656837599997.pdf"
     },
     {
       "id_file": 2,
       "filename": "-934988497.pdf"
-    },
-    {
-      "id_file": 3,
-      "filename": "-934988497168656837599997.pdf"
     }
   ]
 }
@@ -148,17 +148,15 @@
 
 <br>
 
-### Request 4: Download File
+### Request #5: Download file
 
-![GET](https://badgen.net/badge/Method/GET/green)<span style="padding:10px">**/download/<int:file_id>**</span>
+![GET](https://badgen.net/badge/Method/GET/green)<span style="padding:10px">**/download/`<int:id_file>`**</span>
 
 #### Responses:
 
 #### Success
 
 ![OK](https://badgen.net/badge/OK/200/green)
-
-#### File Downloaded
 
 #### Not Logged In
 
@@ -171,13 +169,15 @@
 }
 ```
 
-#### There are still no uploaded file
+#### `<int:id_file>` not matching any ID || You are not the owner of file with that ID
 
 ![Not Found](https://badgen.net/badge/Not%20Found/404/red)
 
 ```json
 {
   "status": "error",
-  "message": "There are still no file"
+  "message": "file not found"
 }
 ```
+
+<br>
