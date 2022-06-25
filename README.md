@@ -5,7 +5,7 @@
 1. Login
 2. Logout
 3. Upload File
-4. View Uploaded File
+4. View All Uploaded File (by Uploader)
 5. Download File
 
 ### Request 1: Login
@@ -78,6 +78,47 @@
 {
   "status": "success",
   "message": "Files uploaded successfully!"
+}
+```
+
+#### Not Logged In
+
+![Not Found](https://badgen.net/badge/Not%20Found/404/red)
+
+```json
+{
+  "status": "error",
+  "message": "Log In First!"
+}
+```
+
+### Request 4: View All Uploaded File (by uploader)
+
+![GET](https://badgen.net/badge/Method/GET/green)<span style="padding:10px">**/file**</span>
+
+#### Responses:
+
+#### Success
+
+![OK](https://badgen.net/badge/OK/200/green)
+
+```json
+{
+  "status": "success",
+  "files": [
+    {
+      "id_file": 1,
+      "filename": "168656837599997.jpg"
+    },
+    {
+      "id_file": 2,
+      "filename": "-934988497.pdf"
+    },
+    {
+      "id_file": 3,
+      "filename": "-934988497168656837599997.pdf"
+    }
+  ]
 }
 ```
 
