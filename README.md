@@ -134,3 +134,14 @@
   "message": "Log In First!"
 }
 ```
+
+#### There are still no uploaded file
+
+![Not Found](https://badgen.net/badge/Not%20Found/404/red)
+
+```json
+{
+  "status": "error",
+  "message": "There are still no file"
+}
+```
