@@ -145,3 +145,39 @@
   "message": "There are still no file"
 }
 ```
+
+<br>
+
+### Request 4: Download File
+
+![GET](https://badgen.net/badge/Method/GET/green)<span style="padding:10px">**/download/<int:file_id>**</span>
+
+#### Responses:
+
+#### Success
+
+![OK](https://badgen.net/badge/OK/200/green)
+
+#### File Downloaded
+
+#### Not Logged In
+
+![Not Found](https://badgen.net/badge/Not%20Found/404/red)
+
+```json
+{
+  "status": "error",
+  "message": "Log In First!"
+}
+```
+
+#### There are still no uploaded file
+
+![Not Found](https://badgen.net/badge/Not%20Found/404/red)
+
+```json
+{
+  "status": "error",
+  "message": "There are still no file"
+}
+```
