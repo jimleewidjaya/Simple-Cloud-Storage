@@ -31,9 +31,9 @@
 }
 ```
 
-#### Success
+#### Not found
 
-![Not Found](https://badgen.net/badge/Not Found/404/red)
+![Not Found](https://badgen.net/badge/Not%20Found/404/red)
 
 ```json
 {
