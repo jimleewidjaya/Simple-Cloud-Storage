@@ -5,7 +5,8 @@
 1. Login
 2. Logout
 3. Upload File
-4. Download File
+4. View Uploaded File
+5. Download File
 
 ### Request 1: Login
 
@@ -46,7 +47,7 @@
 
 ### Request 2: Logout
 
-![POST](https://badgen.net/badge/Method/POST/yellow)<span style="padding:10px">**/logout**</span>
+![GET](https://badgen.net/badge/Method/GET/green)<span style="padding:10px">**/logout**</span>
 
 #### Responses:
 
@@ -58,5 +59,35 @@
 {
   "status": "success",
   "message": "Logged out successfully!"
+}
+```
+
+<br>
+
+### Request 3: Upload File
+
+![POST](https://badgen.net/badge/Method/POST/yellow)<span style="padding:10px">**/upload**</span>
+
+#### Responses:
+
+#### Success
+
+![OK](https://badgen.net/badge/OK/200/green)
+
+```json
+{
+  "status": "success",
+  "message": "Files uploaded successfully!"
+}
+```
+
+#### Not Logged In
+
+![Not Found](https://badgen.net/badge/Not%20Found/404/red)
+
+```json
+{
+  "status": "error",
+  "message": "Log In First!"
 }
 ```
