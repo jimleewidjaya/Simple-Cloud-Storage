@@ -41,3 +41,20 @@
   "message": "Your Username and Password are Not Defined"
 }
 ```
+
+### Request 2: Logout
+
+![POST](https://badgen.net/badge/Method/POST/yellow)<span style="padding:10px">**/logout**</span>
+
+#### Responses:
+
+#### Success
+
+![OK](https://badgen.net/badge/OK/200/green)
+
+```json
+{
+  "status": "success",
+  "message": "Logged out successfully!"
+}
+```
